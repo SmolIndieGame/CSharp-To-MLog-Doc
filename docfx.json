@@ -4,9 +4,8 @@
       "src": [
         {
           "files": [
-            "**.csproj"
-          ],
-          "src": "C:\\Users\\toedy\\_Documents\\GithubClones\\Doc for CSharpToMlog"
+            "src/**.csproj"
+          ]
         }
       ],
       "dest": "api",

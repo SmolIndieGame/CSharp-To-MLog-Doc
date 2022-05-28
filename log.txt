@@ -1,1 +1,0 @@
-{"message":"No metadata is generated for Doc for CSharpToMlog.","source":"MetadataCommand.ExtractMetadata","date_time":"2022-05-28T12:22:22.3552171Z","message_severity":"warning","correlation_id":"C51C759B-E0FC-4BE8-8D0F-8D9747EC18C8.1.1.11"}
