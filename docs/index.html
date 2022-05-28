@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>This is the HOMEPAGE. </title>
+    <title>CSharp To Mindustry Logic </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="This is the HOMEPAGE. ">
+    <meta name="title" content="CSharp To Mindustry Logic ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -60,13 +60,51 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
+<h1 id="csharp-to-mindustry-logic">CSharp To Mindustry Logic</h1>
 
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
-</ol>
+<p>This is a code transpiler that will transpile C# code to mlog.<br>
+This transpiler is highly documented.<br>
+Currently, this is just a console application and only support <strong>windows</strong>.</p>
+<h2 id="how-to-install">How to install</h2>
+<p>You will need an IDE that can open <code>.csproj</code> for auto-completion.<br>
+If you do not have one, I recommand visual studio,<br>
+It can be downloaded <a href="https://visualstudio.microsoft.com">here</a>.</p>
+<p>Goto <a href="https://github.com/SmolIndieGame/CSharp-To-MLog/releases">release</a>, download the latest version<br>
+Open <code>Code Transpiler.lnk</code> and select the code you want to transpile.</p>
+<p>[here] is a video tutorial.</p>
+<h2 id="features">Features</h2>
+<p>This transpiler support the below CSharp features:</p>
+<ul>
+<li>Fields.</li>
+<li>Methods.</li>
+<li>Binary operations. (<code>==</code>, <code>+</code>, <code>&amp;&amp;</code>, <code>||</code>...)</li>
+<li>Jump operations. (<code>break</code>, <code>continue</code>, <code>return</code>, <code>goto</code>)</li>
+<li>Conditional operations. (<code>if</code>, <code>else</code>, conditional expression: <code>&lt;condition&gt; ? &lt;true&gt; : &lt;false&gt;</code>)</li>
+<li>For loops.</li>
+<li>While loops.</li>
+<li>Unary operations. (<code>!</code>, <code>-</code>)</li>
+<li>Conversions. (<code>(int)12.3</code>)</li>
+<li>Enums.</li>
+</ul>
+<p><strong>Not</strong> supported:</p>
+<ul>
+<li>Pattern matching.</li>
+<li>Switch statements and expressions.</li>
+<li>Foreach loops.</li>
+<li>Local functions.</li>
+<li>Lambdas.</li>
+<li>Array.</li>
+<li>Recursion.</li>
+<li>Anything that is not mentioned in supported features.</li>
+</ul>
+<p>Supported fields, local variable, return value, method argument types:</p>
+<ul>
+<li><code>bool</code>, <code>sbyte</code>, <code>byte</code>, <code>short</code>, <code>ushort</code>, <code>int</code>, <code>uint</code></li>
+<li><code>long</code>, <code>ulong</code>, <code>decimal</code>, <code>float</code>, <code>double</code>, <code>string</code></li>
+<li>any enum</li>
+<li>most of the types defined in MindustryLogics.</li>
+<li>array and char is <strong>NOT</strong> supported.</li>
+</ul>
 </article>
           </div>
           
@@ -75,7 +113,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/SmolIndieGame/Doc-for-CSharpToMlog/blob/main/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/SmolIndieGame/CSharp-To-Mlog-Doc/blob/main/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
