@@ -1,0 +1,1790 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Mindustry
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Mindustry
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MindustryLogics.Mindustry">
+  
+  
+  <h1 id="MindustryLogics_Mindustry" data-uid="MindustryLogics.Mindustry" class="text-break">Class Mindustry
+  </h1>
+  <div class="markdown level0 summary"><p>Static class that contains most Mindustry instructions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Mindustry</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MindustryLogics.html">MindustryLogics</a></h6>
+  <h6><strong>Assembly</strong>: MindustryLogics.dll</h6>
+  <h5 id="MindustryLogics_Mindustry_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Mindustry</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MindustryLogics_Mindustry_BindingUnit_" data-uid="MindustryLogics.Mindustry.BindingUnit*"></a>
+  <h4 id="MindustryLogics_Mindustry_BindingUnit" data-uid="MindustryLogics.Mindustry.BindingUnit">BindingUnit</h4>
+  <div class="markdown level1 summary"><p>
+The current bound <a class="xref" href="MindustryLogics.Unit.html">Unit</a>. It changes when <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> is called,<br>
+or set to null when <a class="xref" href="MindustryLogics.UnitControl.html#MindustryLogics_UnitControl_Unbind">Unbind()</a> is called.
+</p>
+<p>Logics can only manipulate the current bound unit (control, radar...).<br>
+However, to sensor (get information about) a unit,<br>
+you can reference the property inside that <a class="xref" href="MindustryLogics.Unit.html">Unit</a>.<br>
+Example: <code>u.Flag</code> will returns the flag of the unit u,<br>
+but <code>u.Move(...)</code> is not allowed.</p>
+<p>If you want to move the current bound unit, use <a class="xref" href="MindustryLogics.UnitControl.html#MindustryLogics_UnitControl_Move_System_Double_System_Double_">Move(Double, Double)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Unit BindingUnit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Unit.html">Unit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_BlockCount_" data-uid="MindustryLogics.Mindustry.BlockCount*"></a>
+  <h4 id="MindustryLogics_Mindustry_BlockCount" data-uid="MindustryLogics.Mindustry.BlockCount">BlockCount</h4>
+  <div class="markdown level1 summary"><p>Get the total count of <a class="xref" href="MindustryLogics.BuildingType.html">BuildingType</a>.<br>
+Useful for loops through all the <a class="xref" href="MindustryLogics.BuildingType.html">BuildingType</a> with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_Lookup_MindustryLogics_Content_System_Int32_">Lookup(Content, Int32)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int BlockCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_BlockCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Not available on V6.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_BuildingCount_" data-uid="MindustryLogics.Mindustry.BuildingCount*"></a>
+  <h4 id="MindustryLogics_Mindustry_BuildingCount" data-uid="MindustryLogics.Mindustry.BuildingCount">BuildingCount</h4>
+  <div class="markdown level1 summary"><p>Get the total count of <a class="xref" href="MindustryLogics.BuildingType.html">BuildingType</a>.<br>
+Useful for loops through all the <a class="xref" href="MindustryLogics.BuildingType.html">BuildingType</a> with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_Lookup_MindustryLogics_Content_System_Int32_">Lookup(Content, Int32)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int BuildingCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_BuildingCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Not available on V6.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_IPT_" data-uid="MindustryLogics.Mindustry.IPT*"></a>
+  <h4 id="MindustryLogics_Mindustry_IPT" data-uid="MindustryLogics.Mindustry.IPT">IPT</h4>
+  <div class="markdown level1 summary"><p>The number of instructions executed per tick (60 ticks/second).</p>
+<ul><li><strong>Micro Processor</strong> 2</li><li><strong>Logic Processor</strong> 8</li><li><strong>Hyper Processor</strong> 25</li></ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double IPT { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_ItemCount_" data-uid="MindustryLogics.Mindustry.ItemCount*"></a>
+  <h4 id="MindustryLogics_Mindustry_ItemCount" data-uid="MindustryLogics.Mindustry.ItemCount">ItemCount</h4>
+  <div class="markdown level1 summary"><p>Get the total count of <a class="xref" href="MindustryLogics.ItemType.html">ItemType</a>.<br>
+Useful for loops through all the <a class="xref" href="MindustryLogics.ItemType.html">ItemType</a> with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_Lookup_MindustryLogics_Content_System_Int32_">Lookup(Content, Int32)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ItemCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_ItemCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Not available on V6.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_LinksCount_" data-uid="MindustryLogics.Mindustry.LinksCount*"></a>
+  <h4 id="MindustryLogics_Mindustry_LinksCount" data-uid="MindustryLogics.Mindustry.LinksCount">LinksCount</h4>
+  <div class="markdown level1 summary"><p>The number of buildings linked to this processor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int LinksCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_LiquidCount_" data-uid="MindustryLogics.Mindustry.LiquidCount*"></a>
+  <h4 id="MindustryLogics_Mindustry_LiquidCount" data-uid="MindustryLogics.Mindustry.LiquidCount">LiquidCount</h4>
+  <div class="markdown level1 summary"><p>Get the total count of <a class="xref" href="MindustryLogics.LiquidType.html">LiquidType</a>.<br>
+Useful for loops through all the <a class="xref" href="MindustryLogics.LiquidType.html">LiquidType</a> with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_Lookup_MindustryLogics_Content_System_Int32_">Lookup(Content, Int32)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int LiquidCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_LiquidCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Not available on V6.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_MapHeight_" data-uid="MindustryLogics.Mindustry.MapHeight*"></a>
+  <h4 id="MindustryLogics_Mindustry_MapHeight" data-uid="MindustryLogics.Mindustry.MapHeight">MapHeight</h4>
+  <div class="markdown level1 summary"><p>Height of the map, in tiles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double MapHeight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_MapWidth_" data-uid="MindustryLogics.Mindustry.MapWidth*"></a>
+  <h4 id="MindustryLogics_Mindustry_MapWidth" data-uid="MindustryLogics.Mindustry.MapWidth">MapWidth</h4>
+  <div class="markdown level1 summary"><p>Width of the map, in tiles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double MapWidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_This_" data-uid="MindustryLogics.Mindustry.This*"></a>
+  <h4 id="MindustryLogics_Mindustry_This" data-uid="MindustryLogics.Mindustry.This">This</h4>
+  <div class="markdown level1 summary"><p>A <a class="xref" href="MindustryLogics.Building.html">Building</a> representing the processor that is executing this code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Building This { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_ThisX_" data-uid="MindustryLogics.Mindustry.ThisX*"></a>
+  <h4 id="MindustryLogics_Mindustry_ThisX" data-uid="MindustryLogics.Mindustry.ThisX">ThisX</h4>
+  <div class="markdown level1 summary"><p>The x coordinate of this processor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double ThisX { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_ThisY_" data-uid="MindustryLogics.Mindustry.ThisY*"></a>
+  <h4 id="MindustryLogics_Mindustry_ThisY" data-uid="MindustryLogics.Mindustry.ThisY">ThisY</h4>
+  <div class="markdown level1 summary"><p>The y coordinate of the processor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double ThisY { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_Ticks_" data-uid="MindustryLogics.Mindustry.Ticks*"></a>
+  <h4 id="MindustryLogics_Mindustry_Ticks" data-uid="MindustryLogics.Mindustry.Ticks">Ticks</h4>
+  <div class="markdown level1 summary"><p>The amount of ticks (60 ticks/second) since the start of the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double Ticks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_Time_" data-uid="MindustryLogics.Mindustry.Time*"></a>
+  <h4 id="MindustryLogics_Mindustry_Time" data-uid="MindustryLogics.Mindustry.Time">Time</h4>
+  <div class="markdown level1 summary"><p>The current UNIX timestamp in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long Time { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_UnitCount_" data-uid="MindustryLogics.Mindustry.UnitCount*"></a>
+  <h4 id="MindustryLogics_Mindustry_UnitCount" data-uid="MindustryLogics.Mindustry.UnitCount">UnitCount</h4>
+  <div class="markdown level1 summary"><p>Get the total count of <a class="xref" href="MindustryLogics.UnitType.html">UnitType</a>.<br>
+Useful for loops through all the <a class="xref" href="MindustryLogics.UnitType.html">UnitType</a> with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_Lookup_MindustryLogics_Content_System_Int32_">Lookup(Content, Int32)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int UnitCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_UnitCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Not available on V6.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MindustryLogics_Mindustry_Control_" data-uid="MindustryLogics.Mindustry.Control*"></a>
+  <h4 id="MindustryLogics_Mindustry_Control_MindustryLogics_Entity_System_Object___" data-uid="MindustryLogics.Mindustry.Control(MindustryLogics.Entity,System.Object[])">Control(Entity, Object[])</h4>
+  <div class="markdown level1 summary"><p>
+<strong>To control buildings:</strong><br>
+<ul><li><strong>enabled</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_Enabled">Enabled</a></li><li><strong>shoot</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_Shoot_System_Double_System_Double_System_Boolean_">Shoot(Double, Double, Boolean)</a></li><li><strong>shootp</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_ShootTarget_MindustryLogics_Entity_System_Boolean_">ShootTarget(Entity, Boolean)</a></li><li><strong>config</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_Config">Config</a></li><li><strong>configure</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_Configure">Configure</a></li><li><strong>color</strong> unsupported</li></ul>
+</p>
+<p>
+<strong>To control units:</strong><br>
+<ul><li>Use methods inside <a class="xref" href="MindustryLogics.UnitControl.html">UnitControl</a>.</li></ul>
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;See the summary of this method for more detail.&quot;, true)]
+public static void Control(Entity entity, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Entity.html">Entity</a></td>
+        <td><span class="parametername">entity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_CustomScript_" data-uid="MindustryLogics.Mindustry.CustomScript*"></a>
+  <h4 id="MindustryLogics_Mindustry_CustomScript_System_String_" data-uid="MindustryLogics.Mindustry.CustomScript(System.String)">CustomScript(String)</h4>
+  <div class="markdown level1 summary"><p>Put <code data-dev-comment-type="paramref" class="paramref">script</code> directly into the output result.<br>
+Use for unsupported features or modded content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CustomScript(string script)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">script</span></td>
+        <td><p>The custom code.<br>Only constant <span class="xref">System.String</span> is accepted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_CustomScript_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only constant values are allowed to pass into this function.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_CustomType_" data-uid="MindustryLogics.Mindustry.CustomType*"></a>
+  <h4 id="MindustryLogics_Mindustry_CustomType_System_String_" data-uid="MindustryLogics.Mindustry.CustomType(System.String)">CustomType(String)</h4>
+  <div class="markdown level1 summary"><p>
+Create a custom type from <code data-dev-comment-type="paramref" class="paramref">typeName</code>.<br>
+Usually for types that are in newer versions or in mods.<br>
+Cast the result to either <a class="xref" href="MindustryLogics.BuildingType.html">BuildingType</a>, <a class="xref" href="MindustryLogics.UnitType.html">UnitType</a>, <a class="xref" href="MindustryLogics.ItemType.html">ItemType</a> or <a class="xref" href="MindustryLogics.LiquidType.html">LiquidType</a>.
+</p>
+<p>
+<code><a class="xref" href="MindustryLogics.Mindustry.html">Mindustry</a>.CustomType(&quot;Exam_ple&quot;)</code> will return @Exam_ple
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object CustomType(string typeName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">typeName</span></td>
+        <td><p>The name of the type.<br>Only constant <span class="xref">System.String</span> is accepted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The type created from <code data-dev-comment-type="paramref" class="paramref">typeName</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_CustomType_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The return type automatically include the @ sign.<br>Only constant values are allowed to pass into this function.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_Draw_" data-uid="MindustryLogics.Mindustry.Draw*"></a>
+  <h4 id="MindustryLogics_Mindustry_Draw_System_Object___" data-uid="MindustryLogics.Mindustry.Draw(System.Object[])">Draw(Object[])</h4>
+  <div class="markdown level1 summary"><p>Use methods inside <a class="xref" href="MindustryLogics.Drawing.html">Drawing</a> instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;See the summary of this method for more detail.&quot;, true)]
+public static void Draw(params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_DrawFlush_" data-uid="MindustryLogics.Mindustry.DrawFlush*"></a>
+  <h4 id="MindustryLogics_Mindustry_DrawFlush_MindustryLogics_Building_" data-uid="MindustryLogics.Mindustry.DrawFlush(MindustryLogics.Building)">DrawFlush(Building)</h4>
+  <div class="markdown level1 summary"><p>Flush queued <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_Draw_System_Object___">Draw(Object[])</a> operations to a display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawFlush(Building block)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">block</span></td>
+        <td><p>The display block to draw to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_DrawFlush_" data-uid="MindustryLogics.Mindustry.DrawFlush*"></a>
+  <h4 id="MindustryLogics_Mindustry_DrawFlush_System_Int32_" data-uid="MindustryLogics.Mindustry.DrawFlush(System.Int32)">DrawFlush(Int32)</h4>
+  <div class="markdown level1 summary"><p>Flush queued <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_Draw_System_Object___">Draw(Object[])</a> operations to a display with suffix <code data-dev-comment-type="paramref" class="paramref">index</code>.<br>
+Example: <code>DrawFlush(2)</code> will print to the display linked to this processor named display2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawFlush(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of the linked display. (starts at 1)<br>Only constant <span class="xref">System.Int32</span> is accepted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_DrawFlush_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only constant values are allowed to pass into this function.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_GetLink_" data-uid="MindustryLogics.Mindustry.GetLink*"></a>
+  <h4 id="MindustryLogics_Mindustry_GetLink_MindustryLogics_BuildingType_System_Int32_" data-uid="MindustryLogics.Mindustry.GetLink(MindustryLogics.BuildingType,System.Int32)">GetLink(BuildingType, Int32)</h4>
+  <div class="markdown level1 summary"><p>Get a linked building by its name.</p>
+<p><code><a class="xref" href="MindustryLogics.Mindustry.html">Mindustry</a>.GetLink(<a class="xref" href="MindustryLogics.BuildingType.html#MindustryLogics_BuildingType_Force_Projector">Force_Projector</a>, 2)</code> will return projector2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LinkedBuilding GetLink(BuildingType buildingType, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.BuildingType.html">BuildingType</a></td>
+        <td><span class="parametername">buildingType</span></td>
+        <td><p>The type of the building.<br>User defined variable is not accepted here.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of the linked building. (starts at 1)<br>Only constant <span class="xref">System.Int32</span> is accepted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.LinkedBuilding.html">LinkedBuilding</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_GetLink_MindustryLogics_BuildingType_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only constant values are allowed to pass into this function.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_GetLink_" data-uid="MindustryLogics.Mindustry.GetLink*"></a>
+  <h4 id="MindustryLogics_Mindustry_GetLink_System_Int32_" data-uid="MindustryLogics.Mindustry.GetLink(System.Int32)">GetLink(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get a linked building by its index. (starts at 0)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Building GetLink(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of the building.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_LocateBuilding_" data-uid="MindustryLogics.Mindustry.LocateBuilding*"></a>
+  <h4 id="MindustryLogics_Mindustry_LocateBuilding_MindustryLogics_BuildingGroup_System_Boolean_System_Double__System_Double__MindustryLogics_Building__" data-uid="MindustryLogics.Mindustry.LocateBuilding(MindustryLogics.BuildingGroup,System.Boolean,System.Double@,System.Double@,MindustryLogics.Building@)">LocateBuilding(BuildingGroup, Boolean, out Double, out Double, out Building)</h4>
+  <div class="markdown level1 summary"><p>Find a building that belongs to <code data-dev-comment-type="paramref" class="paramref">buildingGroup</code> using the current bound unit.<br>
+The return value of this method indicate that such building is found or not.</p>
+<p>Example:<br>
+<code>Mindustry.LocateBuilding(<a class="xref" href="MindustryLogics.BuildingGroup.html#MindustryLogics_BuildingGroup_Core">Core</a>, false, out x, out y, out b)</code>
+This will locate any ally core and put its coordinate into variable x and y, the actually core to b.<br>
+(You need to define x, y and b prior to calling this method)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LocateBuilding(BuildingGroup buildingGroup, bool isEnemy, out double x, out double y, out Building building)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.BuildingGroup.html">BuildingGroup</a></td>
+        <td><span class="parametername">buildingGroup</span></td>
+        <td><p>The required buildings group (a way to categorize buildings) to find.<p>Example:<br>To find turrets: <code><a class="xref" href="MindustryLogics.BuildingGroup.html#MindustryLogics_BuildingGroup_Turret">Turret</a></code></p></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isEnemy</span></td>
+        <td><p>Find a building that belongs to the enemy if <span class="xref">true</span>, find a building that belongs to the ally if <span class="xref">false</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate of the building if it is found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate of the building if it is found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">building</span></td>
+        <td><p>A building that belongs to <code data-dev-comment-type="paramref" class="paramref">buildingGroup</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the current bound unit found the building, <span class="xref">false</span> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_LocateBuilding_MindustryLogics_BuildingGroup_System_Boolean_System_Double__System_Double__MindustryLogics_Building___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_LocateDamagedAllyBuilding_" data-uid="MindustryLogics.Mindustry.LocateDamagedAllyBuilding*"></a>
+  <h4 id="MindustryLogics_Mindustry_LocateDamagedAllyBuilding_System_Double__System_Double__MindustryLogics_Building__" data-uid="MindustryLogics.Mindustry.LocateDamagedAllyBuilding(System.Double@,System.Double@,MindustryLogics.Building@)">LocateDamagedAllyBuilding(out Double, out Double, out Building)</h4>
+  <div class="markdown level1 summary"><p>Find an ally building that is damaged using the current bound unit.<br>
+The return value of this method indicate that such building is found or not.<br>
+If there are multiple damaged buildings, the one with the lowest health will be selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LocateDamagedAllyBuilding(out double x, out double y, out Building building)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate of the building if it is found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The x coordinate of the building if it is found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">building</span></td>
+        <td><p>An ally building that is damaged.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the current bound unit found an damaged ally building, <span class="xref">false</span> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_LocateDamagedAllyBuilding_System_Double__System_Double__MindustryLogics_Building___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_LocateEnemySpawn_" data-uid="MindustryLogics.Mindustry.LocateEnemySpawn*"></a>
+  <h4 id="MindustryLogics_Mindustry_LocateEnemySpawn_System_Double__System_Double__MindustryLogics_Building__" data-uid="MindustryLogics.Mindustry.LocateEnemySpawn(System.Double@,System.Double@,MindustryLogics.Building@)">LocateEnemySpawn(out Double, out Double, out Building)</h4>
+  <div class="markdown level1 summary"><p>Find an enemy spawn point using the current bound unit.<br>
+The return value of this method indicate that such point is found or not.<br>
+An enemy spawn point may be a location or enemy core, so even if that point is found, the <code data-dev-comment-type="paramref" class="paramref">building</code> may be <span class="xref">null</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LocateEnemySpawn(out double x, out double y, out Building building)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate of the spawn point if it is found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate of the spawn point if it is found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">building</span></td>
+        <td><p>The enemy core that spawns enemies if there is one.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the current bound unit found an enemy spawn point, <span class="xref">false</span> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_LocateEnemySpawn_System_Double__System_Double__MindustryLogics_Building___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_LocateOre_" data-uid="MindustryLogics.Mindustry.LocateOre*"></a>
+  <h4 id="MindustryLogics_Mindustry_LocateOre_MindustryLogics_ItemType_System_Double__System_Double__" data-uid="MindustryLogics.Mindustry.LocateOre(MindustryLogics.ItemType,System.Double@,System.Double@)">LocateOre(ItemType, out Double, out Double)</h4>
+  <div class="markdown level1 summary"><p>Find an ore tile of type <code data-dev-comment-type="paramref" class="paramref">ore</code> using the current bound unit.<br>
+The return value of this method indicate that such ore tile is found or not.</p>
+<p>Example:<br>
+<code>Mindustry.LocateOre(<a class="xref" href="MindustryLogics.ItemType.html#MindustryLogics_ItemType_Copper">Copper</a>, out x, out y)</code><br>
+This will locate any copper ore and put its coordinate into variable x and y.<br>
+(You need to define x and y prior to calling this method)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LocateOre(ItemType ore, out double x, out double y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.ItemType.html">ItemType</a></td>
+        <td><span class="parametername">ore</span></td>
+        <td><p>The type of ore to find.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate of the ore tile if the ore is found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate of the ore tile if the ore is found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the current bound unit found an ore tile of type <code data-dev-comment-type="paramref" class="paramref">ore</code>, <span class="xref">false</span> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_LocateOre_MindustryLogics_ItemType_System_Double__System_Double___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_Lookup_" data-uid="MindustryLogics.Mindustry.Lookup*"></a>
+  <h4 id="MindustryLogics_Mindustry_Lookup_MindustryLogics_Content_System_Int32_" data-uid="MindustryLogics.Mindustry.Lookup(MindustryLogics.Content,System.Int32)">Lookup(Content, Int32)</h4>
+  <div class="markdown level1 summary"><p>
+Get the type of a content by its index. (include modded contents)<br>
+Cast the result to either <a class="xref" href="MindustryLogics.BuildingType.html">BuildingType</a>, <a class="xref" href="MindustryLogics.UnitType.html">UnitType</a>, <a class="xref" href="MindustryLogics.ItemType.html">ItemType</a> or <a class="xref" href="MindustryLogics.LiquidType.html">LiquidType</a>.
+</p>
+<p>
+Example:<br><code>Lookup(Content.Unit, 0)</code><br>
+This will return <a class="xref" href="MindustryLogics.UnitType.html#MindustryLogics_UnitType_Dagger">Dagger</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object Lookup(Content content, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Content.html">Content</a></td>
+        <td><span class="parametername">content</span></td>
+        <td><p>What type of content to lookup.<p>Example:<br>To lookup items: <code>Content.Item</code></p></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of the content. (starts at 0)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_Lookup_MindustryLogics_Content_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Not available in V6.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_Noop_" data-uid="MindustryLogics.Mindustry.Noop*"></a>
+  <h4 id="MindustryLogics_Mindustry_Noop" data-uid="MindustryLogics.Mindustry.Noop">Noop()</h4>
+  <div class="markdown level1 summary"><p>Noop stands for no operation. It does nothing but delay the processor by one instruction.<br>
+Maybe you can use it to slow down the processor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Noop()</code></pre>
+  </div>
+  
+  
+  <a id="MindustryLogics_Mindustry_Print_" data-uid="MindustryLogics.Mindustry.Print*"></a>
+  <h4 id="MindustryLogics_Mindustry_Print_System_Object___" data-uid="MindustryLogics.Mindustry.Print(System.Object[])">Print(Object[])</h4>
+  <div class="markdown level1 summary"><p>Add texts to the print buffer.<br>
+To print multiple values at once, use comma to separate them.<br>
+Example: <code>Print(value1, value2, value3)</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Print(params object[] values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_Print_System_Object____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Does not do anything until <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_PrintFlush_MindustryLogics_Building_">PrintFlush(Building)</a> or <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_PrintFlush_System_Int32_">PrintFlush(Int32)</a> is used.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_PrintFlush_" data-uid="MindustryLogics.Mindustry.PrintFlush*"></a>
+  <h4 id="MindustryLogics_Mindustry_PrintFlush_MindustryLogics_Building_" data-uid="MindustryLogics.Mindustry.PrintFlush(MindustryLogics.Building)">PrintFlush(Building)</h4>
+  <div class="markdown level1 summary"><p>Flush queued <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_Print_System_Object___">Print(Object[])</a> operations to a message block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrintFlush(Building block)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">block</span></td>
+        <td><p>The message block to print to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_PrintFlush_" data-uid="MindustryLogics.Mindustry.PrintFlush*"></a>
+  <h4 id="MindustryLogics_Mindustry_PrintFlush_System_Int32_" data-uid="MindustryLogics.Mindustry.PrintFlush(System.Int32)">PrintFlush(Int32)</h4>
+  <div class="markdown level1 summary"><p>Flush queued <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_Print_System_Object___">Print(Object[])</a> operations to a message block with suffix <code data-dev-comment-type="paramref" class="paramref">index</code>.<br>
+Example: <code>PrintFlush(2)</code> will print to the message block linked to this processor named message2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrintFlush(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of the linked message block. (starts at 1)<br>Only constant <span class="xref">System.Int32</span> is accepted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_PrintFlush_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only constant values are allowed to pass into this function.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_Read_" data-uid="MindustryLogics.Mindustry.Read*"></a>
+  <h4 id="MindustryLogics_Mindustry_Read_MindustryLogics_Building_System_Int32_" data-uid="MindustryLogics.Mindustry.Read(MindustryLogics.Building,System.Int32)">Read(Building, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read a number from a linked memory cell or bank.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double Read(Building memoryCell, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">memoryCell</span></td>
+        <td><p>The memory cell to read from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of the number to read from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_Read_MindustryLogics_Building_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Memory cells or banks can only store numeric values.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_Sensor_" data-uid="MindustryLogics.Mindustry.Sensor*"></a>
+  <h4 id="MindustryLogics_Mindustry_Sensor_MindustryLogics_Entity_MindustryLogics_InfoType_" data-uid="MindustryLogics.Mindustry.Sensor(MindustryLogics.Entity,MindustryLogics.InfoType)">Sensor(Entity, InfoType)</h4>
+  <div class="markdown level1 summary"><p>Get the information of type <code data-dev-comment-type="paramref" class="paramref">info</code> about an <a class="xref" href="MindustryLogics.Entity.html">Entity</a>.<br>
+Alias of <a class="xref" href="MindustryLogics.Entity.html#MindustryLogics_Entity_GetInfo_MindustryLogics_InfoType_">GetInfo(InfoType)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object Sensor(Entity entity, InfoType info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Entity.html">Entity</a></td>
+        <td><span class="parametername">entity</span></td>
+        <td><p>The eneity to get information form.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.InfoType.html">InfoType</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The type of information to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_Sensor_MindustryLogics_Entity_MindustryLogics_InfoType__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Since the return type of this method is an object, it is strongly recommended to access the properties of the entity instead.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_Sensor_" data-uid="MindustryLogics.Mindustry.Sensor*"></a>
+  <h4 id="MindustryLogics_Mindustry_Sensor_MindustryLogics_Entity_MindustryLogics_ItemType_" data-uid="MindustryLogics.Mindustry.Sensor(MindustryLogics.Entity,MindustryLogics.ItemType)">Sensor(Entity, ItemType)</h4>
+  <div class="markdown level1 summary"><p>Get the number of items of type <code data-dev-comment-type="paramref" class="paramref">item</code> in an <a class="xref" href="MindustryLogics.Entity.html">Entity</a>.<br>
+Alias of <a class="xref" href="MindustryLogics.Entity.html#MindustryLogics_Entity_GetQuantityOf_MindustryLogics_ItemType_">GetQuantityOf(ItemType)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Sensor(Entity entity, ItemType item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Entity.html">Entity</a></td>
+        <td><span class="parametername">entity</span></td>
+        <td><p>The eneity to get information form.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.ItemType.html">ItemType</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The type of the item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_Sensor_" data-uid="MindustryLogics.Mindustry.Sensor*"></a>
+  <h4 id="MindustryLogics_Mindustry_Sensor_MindustryLogics_Entity_MindustryLogics_LiquidType_" data-uid="MindustryLogics.Mindustry.Sensor(MindustryLogics.Entity,MindustryLogics.LiquidType)">Sensor(Entity, LiquidType)</h4>
+  <div class="markdown level1 summary"><p>Get the amount of liquid of type <code data-dev-comment-type="paramref" class="paramref">liquid</code> in an <a class="xref" href="MindustryLogics.Entity.html">Entity</a>.<br>
+Alias of <a class="xref" href="MindustryLogics.Entity.html#MindustryLogics_Entity_GetQuantityOf_MindustryLogics_LiquidType_">GetQuantityOf(LiquidType)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double Sensor(Entity entity, LiquidType liquid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Entity.html">Entity</a></td>
+        <td><span class="parametername">entity</span></td>
+        <td><p>The eneity to get information form.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.LiquidType.html">LiquidType</a></td>
+        <td><span class="parametername">liquid</span></td>
+        <td><p>The type of the liquid.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_UnitBind_" data-uid="MindustryLogics.Mindustry.UnitBind*"></a>
+  <h4 id="MindustryLogics_Mindustry_UnitBind_MindustryLogics_Unit_" data-uid="MindustryLogics.Mindustry.UnitBind(MindustryLogics.Unit)">UnitBind(Unit)</h4>
+  <div class="markdown level1 summary"><p>Set <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> to the unit <code data-dev-comment-type="paramref" class="paramref">unit</code>.<br>
+So that <code data-dev-comment-type="paramref" class="paramref">unit</code> can be manipulated by Logics.<br>
+Useful if you want to manipulate two or more units at the same time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnitBind(Unit unit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Unit.html">Unit</a></td>
+        <td><span class="parametername">unit</span></td>
+        <td><p>The ally unit to bind to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_UnitBind_MindustryLogics_Unit__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method only works if <code data-dev-comment-type="paramref" class="paramref">unit</code> is not null and is an ally.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_UnitBind_" data-uid="MindustryLogics.Mindustry.UnitBind*"></a>
+  <h4 id="MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_" data-uid="MindustryLogics.Mindustry.UnitBind(MindustryLogics.UnitType)">UnitBind(UnitType)</h4>
+  <div class="markdown level1 summary"><p>Set <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> to a unit of type <code data-dev-comment-type="paramref" class="paramref">unitType</code>.<br>
+If the type of the current bound unit is same as <code data-dev-comment-type="paramref" class="paramref">unitType</code>, than<br>
+<a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> will be set to another unit with the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnitBind(UnitType unitType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.UnitType.html">UnitType</a></td>
+        <td><span class="parametername">unitType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Repeatedly binds unit with the same <code data-dev-comment-type="paramref" class="paramref">unitType</code> will cycle through all units of the same type.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_UnitControl_" data-uid="MindustryLogics.Mindustry.UnitControl*"></a>
+  <h4 id="MindustryLogics_Mindustry_UnitControl_MindustryLogics_Entity_System_Object___" data-uid="MindustryLogics.Mindustry.UnitControl(MindustryLogics.Entity,System.Object[])">UnitControl(Entity, Object[])</h4>
+  <div class="markdown level1 summary"><p>
+<strong>To control buildings:</strong><br>
+<ul><li><strong>enabled</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_Enabled">Enabled</a></li><li><strong>shoot</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_Shoot_System_Double_System_Double_System_Boolean_">Shoot(Double, Double, Boolean)</a></li><li><strong>shootp</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_ShootTarget_MindustryLogics_Entity_System_Boolean_">ShootTarget(Entity, Boolean)</a></li><li><strong>config</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_Config">Config</a></li><li><strong>configure</strong> <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_Configure">Configure</a></li><li><strong>color</strong> unsupported</li></ul>
+</p>
+<p>
+<strong>To control units:</strong><br>
+<ul><li>Use methods inside <a class="xref" href="MindustryLogics.UnitControl.html">UnitControl</a>.</li></ul>
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;See the summary of this method for more detail.&quot;, true)]
+public static void UnitControl(Entity entity, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Entity.html">Entity</a></td>
+        <td><span class="parametername">entity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MindustryLogics_Mindustry_UnitRadar_" data-uid="MindustryLogics.Mindustry.UnitRadar*"></a>
+  <h4 id="MindustryLogics_Mindustry_UnitRadar_MindustryLogics_RadarFilter_MindustryLogics_SortMethod_System_Boolean_" data-uid="MindustryLogics.Mindustry.UnitRadar(MindustryLogics.RadarFilter,MindustryLogics.SortMethod,System.Boolean)">UnitRadar(RadarFilter, SortMethod, Boolean)</h4>
+  <div class="markdown level1 summary"><p>
+Locate units around the current bound unit.<br>
+Unable to detect units outside the <a class="xref" href="MindustryLogics.Entity.html#MindustryLogics_Entity_Range">Range</a> of the current bound unit.
+</p>
+<p>
+For locating units using buildings, use <a class="xref" href="MindustryLogics.Building.html#MindustryLogics_Building_Radar_MindustryLogics_RadarFilter_MindustryLogics_SortMethod_System_Boolean_">Radar(RadarFilter, SortMethod, Boolean)</a> instead.
+</p>
+<p>
+Example:<br><code>Mindustry.UnitRadar(Filter.Radar().Enemy, SortMethod.Distance, true)</code><br>
+This will return a enemy that is in range and is closest to the current bound unit (<a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a>).
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Unit UnitRadar(RadarFilter target, SortMethod sortMethod, bool firstOrLast)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.RadarFilter.html">RadarFilter</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target filter.<br>Use <a class="xref" href="MindustryLogics.Filter.html#MindustryLogics_Filter_Radar">Radar()</a> to create the filter than add constraints into it. (maximum three constraints)<p>Ex:<br>To target enemy ground unit: <code>Filter.Radar().Enemy.Ground</code><br>To target anything: <code>Filter.Radar()</code> or <code>null</code></p></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.SortMethod.html">SortMethod</a></td>
+        <td><span class="parametername">sortMethod</span></td>
+        <td><p>How to sort the results if there are multiple units that are in range and pass the filter.<p>Ex: Sort by health: <code>SortMethod.Health</code></p></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">firstOrLast</span></td>
+        <td><p>Returns the first unit in the results sorted by <code data-dev-comment-type="paramref" class="paramref">sortMethod</code> if <span class="xref">true</span>, returns the last unit otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Unit.html">Unit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_UnitRadar_MindustryLogics_RadarFilter_MindustryLogics_SortMethod_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_Wait_" data-uid="MindustryLogics.Mindustry.Wait*"></a>
+  <h4 id="MindustryLogics_Mindustry_Wait_System_Double_" data-uid="MindustryLogics.Mindustry.Wait(System.Double)">Wait(Double)</h4>
+  <div class="markdown level1 summary"><p>Wait a certain number of seconds.<br>
+When the processor enter this line, it will stop (the @counter stopped moving) until <code data-dev-comment-type="paramref" class="paramref">second</code> seconds is passed.<br>
+Then it will continue to execute the rest of the program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Wait(double second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">second</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_Wait_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Not available in V6.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_Mindustry_Write_" data-uid="MindustryLogics.Mindustry.Write*"></a>
+  <h4 id="MindustryLogics_Mindustry_Write_System_Object_MindustryLogics_Building_System_Int32_" data-uid="MindustryLogics.Mindustry.Write(System.Object,MindustryLogics.Building,System.Int32)">Write(Object, Building, Int32)</h4>
+  <div class="markdown level1 summary"><p>Write a number to a linked memory cell or bank.<br>
+Note that this method accepts <code data-dev-comment-type="paramref" class="paramref">value</code> as objects just to make it easier to work with booleans.<br>
+Any object passed to this method will be converted to the numeric representation of that object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Write(object value, Building memoryCell, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The number to write to the memory cell.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">memoryCell</span></td>
+        <td><p>The memory cell to write to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of the number to write to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_Mindustry_Write_System_Object_MindustryLogics_Building_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Memory cells or banks can only store numeric values.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

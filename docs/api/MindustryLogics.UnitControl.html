@@ -1,0 +1,807 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UnitControl
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UnitControl
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MindustryLogics.UnitControl">
+  
+  
+  <h1 id="MindustryLogics_UnitControl" data-uid="MindustryLogics.UnitControl" class="text-break">Class UnitControl
+  </h1>
+  <div class="markdown level0 summary"><p>This class contains all unit control operations. They all use <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a>.<br></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UnitControl</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MindustryLogics.html">MindustryLogics</a></h6>
+  <h6><strong>Assembly</strong>: MindustryLogics.dll</h6>
+  <h5 id="MindustryLogics_UnitControl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UnitControl</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MindustryLogics_UnitControl_Approach_" data-uid="MindustryLogics.UnitControl.Approach*"></a>
+  <h4 id="MindustryLogics_UnitControl_Approach_System_Double_System_Double_System_Double_" data-uid="MindustryLogics.UnitControl.Approach(System.Double,System.Double,System.Double)">Approach(Double, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Move the current bound unit to the location (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>).<br>
+But keep a distance <code data-dev-comment-type="paramref" class="paramref">radius</code> from the location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Approach(double x, double y, double radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate of the location to move to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate of the location to move to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>The distance to keep away from the location.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_Approach_System_Double_System_Double_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Boost_" data-uid="MindustryLogics.UnitControl.Boost*"></a>
+  <h4 id="MindustryLogics_UnitControl_Boost_System_Boolean_" data-uid="MindustryLogics.UnitControl.Boost(System.Boolean)">Boost(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable boosting of the current bound unit if it is able to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Boost(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td><p><span class="xref">true</span> to enable boosting, <span class="xref">false</span> to disable it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_Boost_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Build_" data-uid="MindustryLogics.UnitControl.Build*"></a>
+  <h4 id="MindustryLogics_UnitControl_Build_System_Double_System_Double_MindustryLogics_BuildingType_System_Double_MindustryLogics_Building_" data-uid="MindustryLogics.UnitControl.Build(System.Double,System.Double,MindustryLogics.BuildingType,System.Double,MindustryLogics.Building)">Build(Double, Double, BuildingType, Double, Building)</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit to build a building of type <code data-dev-comment-type="paramref" class="paramref">buildingType</code> at location (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>) if the unit can build.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Build(double x, double y, BuildingType buildingType, double rotation, Building config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate to build at.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate to build at.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.BuildingType.html">BuildingType</a></td>
+        <td><span class="parametername">buildingType</span></td>
+        <td><p>The type of the building to build.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>The roataion of the building to build.<br>
+<strong>For buildings that have directions:</strong></p>
+<ul><li><strong>0</strong> faces right</li><li><strong>1</strong> faces up</li><li><strong>2</strong> faces left</li><li><strong>3</strong> faces down</li></ul>
+<strong>For turrets and units:</strong>
+<p><strong></strong></p><ul><li><strong>0</strong> faces right</li><li><strong>90</strong> faces up</li><li><strong>180</strong> faces left</li><li><strong>270</strong> faces down</li></ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>The building to copy from.<br>
+If the type of the building <code data-dev-comment-type="paramref" class="paramref">config</code> is same as <code data-dev-comment-type="paramref" class="paramref">buildingType</code>,<br>
+then the building to build will have the same properties as <code data-dev-comment-type="paramref" class="paramref">config</code>.<br>
+It is similar to a player pressing &quot;f&quot; on the building <code data-dev-comment-type="paramref" class="paramref">config</code> and placing it on (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_Build_System_Double_System_Double_MindustryLogics_BuildingType_System_Double_MindustryLogics_Building__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Flag_" data-uid="MindustryLogics.UnitControl.Flag*"></a>
+  <h4 id="MindustryLogics_UnitControl_Flag_System_Double_" data-uid="MindustryLogics.UnitControl.Flag(System.Double)">Flag(Double)</h4>
+  <div class="markdown level1 summary"><p>Flag the current bound unit with <code data-dev-comment-type="paramref" class="paramref">value</code>.<br>
+The flag is only useful for logics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Flag(double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The numeric value to flag the unit with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_Flag_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_GetBlock_" data-uid="MindustryLogics.UnitControl.GetBlock*"></a>
+  <h4 id="MindustryLogics_UnitControl_GetBlock_System_Double_System_Double_MindustryLogics_BuildingType__MindustryLogics_Building__" data-uid="MindustryLogics.UnitControl.GetBlock(System.Double,System.Double,MindustryLogics.BuildingType@,MindustryLogics.Building@)">GetBlock(Double, Double, out BuildingType, out Building)</h4>
+  <div class="markdown level1 summary"><p>
+Get the block information at location (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>).<br>
+The current bound unit must be in range of the location.
+</p>
+<p>
+Example:<br>
+<code>UnitControl.GetBlock(x, y, out t, out b)</code><br>
+This will get the block information at (x, y) and store the type of the block in t, the building in b.<br>
+(You need to define t and b prior to calling this method)
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetBlock(double x, double y, out BuildingType type, out Building building)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate to get information from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate to get information from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.BuildingType.html">BuildingType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the block at location (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>).<br>Solid non-buildings (environment walls) will have type <a class="xref" href="MindustryLogics.BuildingType.html#MindustryLogics_BuildingType_Solid">Solid</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">building</span></td>
+        <td><p>The building at location (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>).<br>It can be null if there is no block or the block is an environment wall.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_GetBlock_System_Double_System_Double_MindustryLogics_BuildingType__MindustryLogics_Building___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Idle_" data-uid="MindustryLogics.UnitControl.Idle*"></a>
+  <h4 id="MindustryLogics_UnitControl_Idle" data-uid="MindustryLogics.UnitControl.Idle">Idle()</h4>
+  <div class="markdown level1 summary"><p>Stop the current bound unit from moving, but keep building or mining. The default state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Idle()</code></pre>
+  </div>
+  <h5 id="MindustryLogics_UnitControl_Idle_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_IsWithin_" data-uid="MindustryLogics.UnitControl.IsWithin*"></a>
+  <h4 id="MindustryLogics_UnitControl_IsWithin_System_Double_System_Double_System_Double_" data-uid="MindustryLogics.UnitControl.IsWithin(System.Double,System.Double,System.Double)">IsWithin(Double, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Is the current bound unit within the circle center at (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>), radius <code data-dev-comment-type="paramref" class="paramref">r</code>?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsWithin(double x, double y, double r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate of the center of the circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate of the center of the circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">r</span></td>
+        <td><p>The radius of the circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the unit is within the circle, <span class="xref">false</span> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_IsWithin_System_Double_System_Double_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_ItemDrop_" data-uid="MindustryLogics.UnitControl.ItemDrop*"></a>
+  <h4 id="MindustryLogics_UnitControl_ItemDrop_MindustryLogics_Building_System_Int32_" data-uid="MindustryLogics.UnitControl.ItemDrop(MindustryLogics.Building,System.Int32)">ItemDrop(Building, Int32)</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit to drop its items to building <code data-dev-comment-type="paramref" class="paramref">to</code>.<br>
+The current bound unit must be near the building for this to work.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ItemDrop(Building to, int amount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>The building to drop items to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td><p>The amount of items to drop.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_ItemDrop_MindustryLogics_Building_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_ItemTake_" data-uid="MindustryLogics.UnitControl.ItemTake*"></a>
+  <h4 id="MindustryLogics_UnitControl_ItemTake_MindustryLogics_Building_MindustryLogics_ItemType_System_Int32_" data-uid="MindustryLogics.UnitControl.ItemTake(MindustryLogics.Building,MindustryLogics.ItemType,System.Int32)">ItemTake(Building, ItemType, Int32)</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit to take items from building <code data-dev-comment-type="paramref" class="paramref">from</code>.<br>
+The current bound unit must be near the building for this to work.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ItemTake(Building from, ItemType type, int amount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Building.html">Building</a></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The building to take items from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.ItemType.html">ItemType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of item to take.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td><p>The amount of items to take.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_ItemTake_MindustryLogics_Building_MindustryLogics_ItemType_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Mine_" data-uid="MindustryLogics.UnitControl.Mine*"></a>
+  <h4 id="MindustryLogics_UnitControl_Mine_System_Double_System_Double_" data-uid="MindustryLogics.UnitControl.Mine(System.Double,System.Double)">Mine(Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit to mine at the location (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>) if it is a exposed ore tile that the unit can mine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Mine(double x, double y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate to mine at.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate to mine at.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_Mine_System_Double_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Move_" data-uid="MindustryLogics.UnitControl.Move*"></a>
+  <h4 id="MindustryLogics_UnitControl_Move_System_Double_System_Double_" data-uid="MindustryLogics.UnitControl.Move(System.Double,System.Double)">Move(Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Move the current bound unit to the location (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Move(double x, double y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate of the location to move to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate of the location to move to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_Move_System_Double_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Pathfind_" data-uid="MindustryLogics.UnitControl.Pathfind*"></a>
+  <h4 id="MindustryLogics_UnitControl_Pathfind" data-uid="MindustryLogics.UnitControl.Pathfind">Pathfind()</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit pathfind to the enemy spawn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Pathfind()</code></pre>
+  </div>
+  <h5 id="MindustryLogics_UnitControl_Pathfind_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_PayDrop_" data-uid="MindustryLogics.UnitControl.PayDrop*"></a>
+  <h4 id="MindustryLogics_UnitControl_PayDrop" data-uid="MindustryLogics.UnitControl.PayDrop">PayDrop()</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit to drop the current payload (building or unit the current bound unit is carrying) at its current location.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PayDrop()</code></pre>
+  </div>
+  <h5 id="MindustryLogics_UnitControl_PayDrop_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_PayEnter_" data-uid="MindustryLogics.UnitControl.PayEnter*"></a>
+  <h4 id="MindustryLogics_UnitControl_PayEnter" data-uid="MindustryLogics.UnitControl.PayEnter">PayEnter()</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit to enter a building that is under its current location if that building accept units as input.</p>
+<p>Not available in V6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PayEnter()</code></pre>
+  </div>
+  <h5 id="MindustryLogics_UnitControl_PayEnter_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_PayTake_" data-uid="MindustryLogics.UnitControl.PayTake*"></a>
+  <h4 id="MindustryLogics_UnitControl_PayTake_System_Boolean_" data-uid="MindustryLogics.UnitControl.PayTake(System.Boolean)">PayTake(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit to carry a building or unit that is under its current location.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PayTake(bool takeUnits)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">takeUnits</span></td>
+        <td><p>Take only units if <span class="xref">true</span>, take only buildings otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_PayTake_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Stop_" data-uid="MindustryLogics.UnitControl.Stop*"></a>
+  <h4 id="MindustryLogics_UnitControl_Stop" data-uid="MindustryLogics.UnitControl.Stop">Stop()</h4>
+  <div class="markdown level1 summary"><p>Stop the current bound unit completely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Stop()</code></pre>
+  </div>
+  <h5 id="MindustryLogics_UnitControl_Stop_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Target_" data-uid="MindustryLogics.UnitControl.Target*"></a>
+  <h4 id="MindustryLogics_UnitControl_Target_System_Double_System_Double_System_Boolean_" data-uid="MindustryLogics.UnitControl.Target(System.Double,System.Double,System.Boolean)">Target(Double, Double, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit to shoot or aim at location (<code data-dev-comment-type="paramref" class="paramref">x</code>, <code data-dev-comment-type="paramref" class="paramref">y</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Target(double x, double y, bool shootOrAim)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate to shoot or aim at.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate to shoot or aim at.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">shootOrAim</span></td>
+        <td><p>Shoot if <span class="xref">true</span>, only aim at target otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_Target_System_Double_System_Double_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Targetp_" data-uid="MindustryLogics.UnitControl.Targetp*"></a>
+  <h4 id="MindustryLogics_UnitControl_Targetp_MindustryLogics_Entity_System_Boolean_" data-uid="MindustryLogics.UnitControl.Targetp(MindustryLogics.Entity,System.Boolean)">Targetp(Entity, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Order the current bound unit to shoot or aim at <code data-dev-comment-type="paramref" class="paramref">target</code>.<br>
+It will try to predict the <code data-dev-comment-type="paramref" class="paramref">target</code> movement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Targetp(Entity target, bool shootOrAim)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MindustryLogics.Entity.html">Entity</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target entity (building or unit) to shoot or aim at.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">shootOrAim</span></td>
+        <td><p>Shoot if <span class="xref">true</span>, only aim at target otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MindustryLogics_UnitControl_Targetp_MindustryLogics_Entity_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+  
+  
+  <a id="MindustryLogics_UnitControl_Unbind_" data-uid="MindustryLogics.UnitControl.Unbind*"></a>
+  <h4 id="MindustryLogics_UnitControl_Unbind" data-uid="MindustryLogics.UnitControl.Unbind">Unbind()</h4>
+  <div class="markdown level1 summary"><p>Unbind the current bound unit, making this logic no longer able to manipulate this unit.<br>
+Normally, an unit controlled by a processor will unbind after some time if the processor is no longer controlling it.<br>
+Calling this function will make the unit switch back to using the default unit AI instantly.</p>
+<p>Not available on V6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Unbind()</code></pre>
+  </div>
+  <h5 id="MindustryLogics_UnitControl_Unbind_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses the current bound unit. Bind a unit with <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_UnitBind_MindustryLogics_UnitType_">UnitBind(UnitType)</a> and make sure that <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_BindingUnit">BindingUnit</a> is not null.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
