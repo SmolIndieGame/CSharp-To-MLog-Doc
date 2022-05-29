@@ -5283,51 +5283,6 @@ references:
   isSpec: "True"
   fullName: MindustryLogics.LinkedBuilding.Name
   nameWithType: LinkedBuilding.Name
-- uid: MindustryLogics.LinkedToAttribute
-  name: LinkedToAttribute
-  href: api/MindustryLogics.LinkedToAttribute.html
-  commentId: T:MindustryLogics.LinkedToAttribute
-  fullName: MindustryLogics.LinkedToAttribute
-  nameWithType: LinkedToAttribute
-- uid: MindustryLogics.LinkedToAttribute.#ctor(MindustryLogics.BuildingType,System.Int32)
-  name: LinkedToAttribute(BuildingType, Int32)
-  href: api/MindustryLogics.LinkedToAttribute.html#MindustryLogics_LinkedToAttribute__ctor_MindustryLogics_BuildingType_System_Int32_
-  commentId: M:MindustryLogics.LinkedToAttribute.#ctor(MindustryLogics.BuildingType,System.Int32)
-  fullName: MindustryLogics.LinkedToAttribute.LinkedToAttribute(MindustryLogics.BuildingType, System.Int32)
-  nameWithType: LinkedToAttribute.LinkedToAttribute(BuildingType, Int32)
-- uid: MindustryLogics.LinkedToAttribute.#ctor*
-  name: LinkedToAttribute
-  href: api/MindustryLogics.LinkedToAttribute.html#MindustryLogics_LinkedToAttribute__ctor_
-  commentId: Overload:MindustryLogics.LinkedToAttribute.#ctor
-  isSpec: "True"
-  fullName: MindustryLogics.LinkedToAttribute.LinkedToAttribute
-  nameWithType: LinkedToAttribute.LinkedToAttribute
-- uid: MindustryLogics.LinkedToAttribute.BuildingType
-  name: BuildingType
-  href: api/MindustryLogics.LinkedToAttribute.html#MindustryLogics_LinkedToAttribute_BuildingType
-  commentId: P:MindustryLogics.LinkedToAttribute.BuildingType
-  fullName: MindustryLogics.LinkedToAttribute.BuildingType
-  nameWithType: LinkedToAttribute.BuildingType
-- uid: MindustryLogics.LinkedToAttribute.BuildingType*
-  name: BuildingType
-  href: api/MindustryLogics.LinkedToAttribute.html#MindustryLogics_LinkedToAttribute_BuildingType_
-  commentId: Overload:MindustryLogics.LinkedToAttribute.BuildingType
-  isSpec: "True"
-  fullName: MindustryLogics.LinkedToAttribute.BuildingType
-  nameWithType: LinkedToAttribute.BuildingType
-- uid: MindustryLogics.LinkedToAttribute.Index
-  name: Index
-  href: api/MindustryLogics.LinkedToAttribute.html#MindustryLogics_LinkedToAttribute_Index
-  commentId: P:MindustryLogics.LinkedToAttribute.Index
-  fullName: MindustryLogics.LinkedToAttribute.Index
-  nameWithType: LinkedToAttribute.Index
-- uid: MindustryLogics.LinkedToAttribute.Index*
-  name: Index
-  href: api/MindustryLogics.LinkedToAttribute.html#MindustryLogics_LinkedToAttribute_Index_
-  commentId: Overload:MindustryLogics.LinkedToAttribute.Index
-  isSpec: "True"
-  fullName: MindustryLogics.LinkedToAttribute.Index
-  nameWithType: LinkedToAttribute.Index
 - uid: MindustryLogics.LiquidType
   name: LiquidType
   href: api/MindustryLogics.LiquidType.html

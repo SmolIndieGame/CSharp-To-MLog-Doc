@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MindustryLogics.Drawing.html",
-          "hash": "gPK7MRzzj2qFSnCj3aDDzWOTkuA5ar65jUg3NpGBNwg="
+          "hash": "RhXh+zVK9IH1LIzC9qki6DYlTQWU3xfjy7PFFQIX5vs="
         }
       },
       "is_incremental": true,
@@ -201,19 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MindustryLogics.LinkedBuilding.html",
-          "hash": "DNIy9e6SZY0iVGVDtRE94hKcC0ZpyJ9z8+kzG1AXBOY="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MindustryLogics.LinkedToAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MindustryLogics.LinkedToAttribute.html",
-          "hash": "c93d1vV6jjNbk6XePI/MVVMF6rbzsc9GYIJ3QvcaomE="
+          "hash": "w+9Rp44o9qlNStJxaB0ngVx/bZSywSH0bBDCnIKZwgg="
         }
       },
       "is_incremental": true,
@@ -333,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MindustryLogics.html",
-          "hash": "Li0h6qTIHgrVGhM7MX5c6AaulYSSgUN4dE3KskGPxEU="
+          "hash": "pxflKedBxcz7B0uZH/ZDYJQokMrdkIX+Dxq7vWN0qJ4="
         }
       },
       "is_incremental": true,
@@ -357,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "yrpeEOF3Km27CKmr3EL3oSeyHLcoxk+KHDOArNq+QAo="
+          "hash": "0rMNqFyiD2gl0burWbotSANG3AkP5yAk0dttNYXOy1M="
         }
       },
       "is_incremental": false,
@@ -430,8 +418,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 28,
-          "skipped_file_count": 28
+          "total_file_count": 27,
+          "skipped_file_count": 27
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

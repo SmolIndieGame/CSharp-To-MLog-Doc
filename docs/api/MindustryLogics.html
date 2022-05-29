@@ -154,19 +154,9 @@ ExAm_Ple will be converted to @exam-ple.</p>
 This class is created to solve the issue of needing to type <a class="xref" href="MindustryLogics.Mindustry.html#MindustryLogics_Mindustry_GetLink_MindustryLogics_BuildingType_System_Int32_">GetLink(BuildingType, Int32)</a><br>
 everytime you wanted to get a linked building by its name.</p>
 <p>Example declaration:<br>
-<code>[<a class="xref" href="MindustryLogics.LinkedToAttribute.html">LinkedToAttribute</a>(<a class="xref" href="MindustryLogics.BuildingType.html#MindustryLogics_BuildingType_Duo">Duo</a>, 27)]<br>
-<span class="xref">langword_csharp_private</span> <a class="xref" href="MindustryLogics.LinkedBuilding.html">LinkedBuilding</a> turret;<br></code>
+<code><span class="xref">langword_csharp_private</span> <a class="xref" href="MindustryLogics.LinkedBuilding.html">LinkedBuilding</a> turret = GetLink(<a class="xref" href="MindustryLogics.BuildingType.html#MindustryLogics_BuildingType_Duo">Duo</a>, 27);<br></code>
 Everytime the field turret is referenced, it will transpile to duo27.
 </p>
-</section>
-      <h4><a class="xref" href="MindustryLogics.LinkedToAttribute.html">LinkedToAttribute</a></h4>
-      <section><p>Use this attribute to let a linked building know what it is linked to.</p>
-<p>Example:<br>
-<pre><code>...
-[<a class="xref" href="MindustryLogics.LinkedToAttribute.html">LinkedToAttribute</a>(<a class="xref" href="MindustryLogics.BuildingType.html#MindustryLogics_BuildingType_Duo">Duo</a>, 27)]<br>
-<span class="xref">langword_csharp_private</span> <a class="xref" href="MindustryLogics.LinkedBuilding.html">LinkedBuilding</a> turret;
-...</code></pre>
-Everytime the field turret is referenced, it will transpile to duo27.</p>
 </section>
       <h4><a class="xref" href="MindustryLogics.LiquidType.html">LiquidType</a></h4>
       <section><p>The type of liquid.</p>
